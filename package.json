@@ -2,7 +2,7 @@
   "name": "toxify",
   "version": "0.1.0",
   "description": "Beautiful Tox",
-  "main": "toxify.js",
+  "main": "src/toxify.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
