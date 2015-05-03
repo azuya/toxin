@@ -1,0 +1,22 @@
+{
+  "name": "toxify",
+  "version": "0.1.0",
+  "description": "Beautiful Tox",
+  "main": "toxify.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tox",
+    "im",
+    "instant",
+    "messaging",
+    "cryptography"
+  ],
+  "author": "Oliver Nordbjerg <oliver@pfmedia.dk>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.25.1-1"
+  }
+}
