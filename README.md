@@ -7,7 +7,7 @@ This is a beautiful cross-platform client for Tox, built with [Electron][2].
 ```
 git clone https://github.com/onbjerg/toxify
 cd toxify
-npm install
+apm install
 npm start
 ```
 
