@@ -10,11 +10,11 @@ The development cycle of Toxify will be split into 3 major phases, each with the
 own unique additions and modifications.
 
 ### Phase 1
-- [ ] Basic interface
-- [ ] Incoming messages
+- [x] Basic interface
+- [x] Incoming messages
 - [ ] Outgoing messages
 - [ ] Friend requests
-- [ ] User updates (status, message, name)
+- [x] User updates (status, message, name)
 
 ### Phase 2
 - [ ] Basic settings page
