@@ -2,6 +2,11 @@
 
 This is a beautiful cross-platform client for Tox, built with [Electron][2].
 
+[![Build status](https://img.shields.io/travis/onbjerg/toxify.svg)](https://travis-ci.org/onbjerg/toxify)
+[![Version](https://img.shields.io/github/release/onbjerg/toxify.svg)](https://github.com/onbjerg/toxify/releases)
+[![Dependency Status](https://img.shields.io/david/onbjerg/toxify.svg)](https://david-dm.org/onbjerg/toxify)
+[![Dev Dependency Status](https://img.shields.io/david/dev/onbjerg/toxify.svg)](https://david-dm.org/onbjerg/toxify#info=devDependencies)
+
 ## Vision
 
 **Please note that Toxify is still undergoing heavy development!**
