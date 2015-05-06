@@ -83,6 +83,8 @@ angular.module('toxify.services', []).
       service.requests.push(e.publicKeyHex());
 
       // TODO Friend request dialog
+      // For now we just accept everyone
+      service.add(e.publicKeyHex());
     });
 
     tox.on('friendName', function(e) {
