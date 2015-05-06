@@ -1,29 +1,192 @@
-@import 'normalize.css';
-@import 'skeleton.css';
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
+html,
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+    font-family: 'Lora', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+.primary {
+    color: #FC6747;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+h1.home {
+  font-size: 12pt;
+  color: #dadada;
   height: 100%;
-  color: #B0BEC5;
-  display: table;
-  font-weight: 100;
-  font-family: 'Lato';
+  margin: 0 auto;
+  display: block;
 }
-.container {
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
+
+h1,
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
 }
-.content {
-  text-align: center;
-  display: inline-block;
+
+h1,
+h2 {
+    color: #FC6747;
 }
-.title {
-  font-size: 96px;
-  margin-bottom: 40px;
+h3 {
+    font-weight: 400;
 }
-.quote {
-  font-size: 24px;
+
+h1 {
+    text-transform: uppercase;
+    font-size: 26pt;
+}
+h1 span {
+    text-transform: lowercase;
+}
+
+header {
+    background-color: #031C30;
+    height: 77px;
+    -webkit-app-region: drag;
+}
+    header h1 {
+        padding: 15px 12px;
+    }
+    header .user {
+        margin-top: 2px;
+        -webkit-app-region: no-drag;
+        -webkit-user-select: none;
+    }
+    header .user .info .name {
+        color: #FC6747;
+    }
+    header .action {
+        color: #FC6747;
+        font-size: 18pt;
+        padding: 5px;
+        padding-top: 10px;
+        margin: 14px 2px;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        -webkit-app-region: no-drag;
+        cursor: pointer;
+    }
+        header .action:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            color: white;
+        }
+
+#contacts {
+    background-color: #E6E6E6;
+    width: 260px;
+    float: left;
+    height: 100%;
+}
+    #contacts .filter {
+        font-family: 'Lato', sans-serif;
+        font-size: 10pt;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #DEDEDE;
+        margin: 8px 12px;
+        padding: 6px 4px;
+        outline: none;
+        width: 190px;
+    }
+.user {
+    padding: 8px 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+.user.current {
+    background-color: #DADADA;
+}
+.user .avatar {
+    width: 54px;
+    height: 54px;
+    float: left;
+    position: relative;
+}
+.user .avatar img {
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+}
+    .user.offline .avatar img {
+        opacity: 0.5;
+        transition: all 0.5s ease;
+    }
+    .user:hover .avatar img {
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+.user .avatar .status {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    border: 2px solid #E6E6E6;
+}
+    .user.online .avatar .status {
+        background-color: #008E09;
+    }
+    .user.away .avatar .status {
+        background-color: #FFBF00;
+    }
+    .user.busy .avatar .status {
+      background-color: #C0392B;
+    }
+    .user.offline .avatar .status {
+        background-color: #B3B3B3;
+    }
+.user .info {
+    float: left;
+    padding-left: 12px;
+    padding-top: 6px;
+    width: 170px;
+}
+.user .info .name {
+    color: #666666;
+    text-overflow: ellipsis;
+}
+.user .info .message {
+    color: #999999;
+    font-size: 10pt;
+    font-style: italic;
+    text-overflow: ellipsis;
+}
+
+#container {
+    background-color: #F6F6F6;
+    overflow: hidden;
+    width: 100%;
+}
+#content {
+  float: left;
+}
+
+#content .message {
+  background-color: white;
+  padding: 10px;
+  margin: 10px 20px;
+  border-radius: 6px;
+}
+#content .message.me {
+  border: 1px solid #dedede;
+  background-color: transparent;
 }

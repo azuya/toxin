@@ -4,12 +4,52 @@
 
     <link href="css/app.css" rel="stylesheet" type="text/css">
 	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Toxify</div>
-				<div class="quote">Beautiful Tox</div>
-			</div>
+	<body ng-app="toxify">
+		<header ng-controller="SelfCtrl">
+				<div class="left user {{status}}">
+						<div class="avatar">
+								<img src="img/default.png" alt="{{name}}">
+								<span class="status"></span>
+						</div>
+						<div class="info">
+								<h3 class="name">{{name}}</h3>
+								<span class="message">{{message}}</span>
+						</div>
+						<div class="clear"></div>
+				</div>
+
+				<div class="right" style="margin-right: 14px">
+						<h1 class="left">Toxify</h1>
+						<div class="action left">
+								<span class="fa fa-cog"></span>
+						</div>
+						<div class="action left">
+								<span class="fa fa-remove" ng-click="close()"></span>
+						</div>
+				</div>
+		</header>
+		<div id="container">
+				<div id="contacts" ng-controller="ContactCtrl">
+						<div>
+								<input type="text" class="filter" ng-model="user" placeholder="Search contacts">
+								<span class="fa fa-user-plus primary" ng-click="add()"></span>
+						</div>
+						<a href="#/chat/{{contact.num}}" ng-repeat="contact in contacts | orderBy: status" class="user {{contact.status}}">
+								<div class="avatar">
+										<img src="img/default.png" alt="{{contact.name}}">
+										<span class="status"></span>
+								</div>
+								<div class="info">
+										<h3 class="name">{{contact.name}}</h3>
+										<span class="message">{{contact.message}}</span>
+								</div>
+								<div class="clear"></div>
+						</a>
+				</div>
+				<div id="content" ng-view></div>
+				<div class="clear"></div>
 		</div>
+
+    <script src="js/app.js" type="application/javascript"></script>
 	</body>
 </html>

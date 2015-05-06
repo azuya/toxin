@@ -2,6 +2,7 @@ var app = require('app');
 var BrowserWindow = require('browser-window');
 var path = require('path');
 var url = require('url');
+var ipc = require('ipc');
 
 require('crash-reporter').start();
 
@@ -16,7 +17,11 @@ app.on('ready', function() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    title: 'Toxify'
+    title: 'Toxify',
+    frame: false,
+    'web-preferences': {
+      'overlay-scrollbars': true
+    }
   });
 
   var targetPath = path.resolve(__dirname, '..', 'static', 'index.html');
@@ -30,4 +35,11 @@ app.on('ready', function() {
   mainWindow.on('closed', function() {
     mainWindow = null;
   });
+  mainWindow.toggleDevTools()
+});
+
+ipc.on('quit', function() {
+  // The client wants to quit
+  // :(
+  app.quit();
 });
