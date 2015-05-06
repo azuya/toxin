@@ -38,5 +38,14 @@ toxify.controller('ContactCtrl', ['$scope', 'Friend', function($scope, friend) {
 toxify.controller('ChatCtrl', ['$scope', '$routeParams', 'Tox', 'Me', 'Chat', function($scope, $routeParams, tox, me, chat) {
   // TODO Fix injection clutter
   // TODO More elegant solution?
-  $scope.messages = chat.chats[$routeParams.id].messages;
+  $scope.messages = [];
+  $scope.$watch(
+    function() {
+      return chat.messages($routeParams.id);
+    },
+    function(newVal) {
+      $scope.messages = chat.messages($routeParams.id);
+    },
+    true
+  )
 }]);
