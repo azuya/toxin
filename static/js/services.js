@@ -56,7 +56,7 @@ angular.module('toxify.services', []).
         if(typeof addr != 'string') {
           addr = addr.toHex().toString();
         }
-        if(_.contains(this.requests, addr)) {
+        if(_.where(this.requests, { address: addr })) {
           var num = tox.addFriendNoRequestSync(addr)
           return;
         }
@@ -80,7 +80,10 @@ angular.module('toxify.services', []).
     }
 
     tox.on('friendRequest', function(e) {
-      service.requests.push(e.publicKeyHex());
+      service.requests.push({
+        address: e.publicKeyHex(),
+        message: e.message()
+      });
 
       // TODO Friend request dialog
       // For now we just accept everyone
