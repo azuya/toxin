@@ -7,6 +7,24 @@ body {
     font-family: 'Lora', sans-serif;
     padding: 0;
     margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+::-webkit-input-placeholder {
+   color: #5e2f2f;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #5e2f2f;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #5e2f2f;
+}
+
+:-ms-input-placeholder {
+   color: #5e2f2f;
 }
 
 .clear {
@@ -88,13 +106,13 @@ header {
             color: white;
         }
 
-#contacts {
+#sidebar {
     background-color: #E6E6E6;
     width: 260px;
     float: left;
-    height: 100%;
+    height: inherit;
 }
-    #contacts .filter {
+    #sidebar .filter {
         font-family: 'Lato', sans-serif;
         font-size: 10pt;
         background-color: transparent;
@@ -174,20 +192,47 @@ header {
 
 #container {
     background-color: #F6F6F6;
-    overflow: hidden;
     width: 100%;
+    height: inherit;
 }
-#content {
-  float: left;
+#primary {
+  margin-left: 260px;
+  padding-bottom: 77px;
+  height: inherit;
 }
 
-#content .message {
+/** Status **/
+#log {
+  height: 80%;
+  overflow: auto;
+}
+#log .message {
   background-color: white;
   padding: 10px;
   margin: 10px 20px;
   border-radius: 6px;
+  float: left;
+  clear: both;
 }
-#content .message.me {
+#log .message.me {
   border: 1px solid #dedede;
   background-color: transparent;
+  float: right;
+}
+
+#composer {
+  height: 20%;
+}
+
+#composer textarea {
+  border: none;
+  border-top: 2px solid #552e2e;
+  padding: 20px;
+  font-family: 'Lora', sans-serif;
+  font-size: 10pt;
+  resize: none;
+  outline: none;
+  float: left;
+  width: 100%;
+  height: 100%;
 }

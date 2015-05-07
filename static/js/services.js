@@ -144,22 +144,40 @@ angular.module('toxify.services', []).
           return chat.id == id;
         });
       },
+      constructChat: function(id) {
+        this.chats.push({
+          id: id,
+          messages: []
+        });
+
+        return this.findChat(id);
+      },
       messages: function(id) {
         if(!this.findChat(id)) {
           return null;
         }
         return this.findChat(id).messages;
+      },
+      send: function(receipient, message) {
+        tox.sendFriendMessageSync(receipient, message);
+
+        var chat = service.findChat(receipient);
+        if(!chat) {
+          chat = service.constructChat(receipient);
+        }
+
+        chat.messages.push({
+          action: false,
+          body: message,
+          me: true
+        });
       }
     };
 
     tox.on('friendMessage', function(e) {
       var chat = service.findChat(e.friend());
       if(!chat) {
-        service.chats.push({
-          id: e.friend(),
-          messages: []
-        });
-        chat = service.findChat(e.friend());
+        chat = service.constructChat(e.friend());
       }
 
       chat.messages.push({

@@ -1,3 +1,9 @@
-<div class="animated fadeInUp message" ng-class="{me: message.me}" ng-repeat="message in messages">
-  {{ message.body }}
+<div id="log" scroll-glue>
+  <div class="animated fadeInUp message" ng-class="{me: message.me}" ng-repeat="message in messages">
+    {{ message.body }}
+  </div>
+</div>
+<div id="composer">
+  <textarea ng-keyup="$event.keyCode == 13 ? sendMessage() : null" ng-model="message" placeholder="Your message" rows="1"></textarea>
+  <a href="#" class="fa fa-send send"></a>
 </div>

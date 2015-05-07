@@ -29,7 +29,7 @@
 				</div>
 		</header>
 		<div id="container">
-				<div id="contacts" ng-controller="ContactCtrl">
+				<div id="sidebar" ng-controller="ContactCtrl">
 						<div>
 								<input type="text" class="filter" ng-model="user" placeholder="Search contacts">
 								<span class="fa fa-user-plus primary" ng-click="add()"></span>
@@ -46,7 +46,7 @@
 								<div class="clear"></div>
 						</a>
 				</div>
-				<div id="content" ng-view></div>
+				<div id="primary" ng-view></div>
 				<div class="clear"></div>
 		</div>
 

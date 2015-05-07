@@ -47,5 +47,11 @@ toxify.controller('ChatCtrl', ['$scope', '$routeParams', 'Tox', 'Me', 'Chat', fu
       $scope.messages = chat.messages($routeParams.id);
     },
     true
-  )
+  );
+
+  $scope.sendMessage = function() {
+    chat.send($routeParams.id, $scope.message);
+    
+    $scope.message = '';
+  }
 }]);
