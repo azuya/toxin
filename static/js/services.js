@@ -56,7 +56,7 @@ angular.module('toxify.services', []).
         if(typeof addr != 'string') {
           addr = addr.toHex().toString();
         }
-        if(_.where(this.requests, { address: addr })) {
+        if(_.where(this.requests, { address: addr }).length) {
           var num = tox.addFriendNoRequestSync(addr)
           return;
         }
