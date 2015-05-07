@@ -13,7 +13,7 @@ toxify.controller('HomeCtrl', ['$scope', '$interval', function($scope, $interval
     $scope.tip = tips[Math.floor((Math.random() * tips.length) +1 )];
   }, 5000);
 }]);
-toxify.controller('SelfCtrl', ['$scope', 'Tox', 'Me', function($scope, tox, me) {
+toxify.controller('SelfCtrl', ['$scope', 'Me', function($scope, me) {
   $scope.name = me.name;
   $scope.message = me.message;
   $scope.status = me.status;
@@ -35,8 +35,7 @@ toxify.controller('ContactCtrl', ['$scope', 'Friend', function($scope, friend) {
   }
 }]);
 
-toxify.controller('ChatCtrl', ['$scope', '$routeParams', 'Tox', 'Me', 'Chat', function($scope, $routeParams, tox, me, chat) {
-  // TODO Fix injection clutter
+toxify.controller('ChatCtrl', ['$scope', '$routeParams', 'Chat', function($scope, $routeParams, chat) {
   // TODO More elegant solution?
   $scope.messages = [];
   $scope.$watch(
@@ -51,7 +50,7 @@ toxify.controller('ChatCtrl', ['$scope', '$routeParams', 'Tox', 'Me', 'Chat', fu
 
   $scope.sendMessage = function() {
     chat.send($routeParams.id, $scope.message);
-    
+
     $scope.message = '';
   }
 }]);
