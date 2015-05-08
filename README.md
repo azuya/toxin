@@ -21,7 +21,6 @@ own unique additions and modifications.
 - [ ] Friend requests
 - [x] User updates (status, message, name)
 - [x] Change name and message
-- [ ] Change status
 - [x] Save/load profile to disk
 
 ### Phase 2
@@ -30,6 +29,8 @@ own unique additions and modifications.
 - [ ] Emojis
 - [ ] Group chats
 - [ ] One-on-one calls
+- [ ] Error messages
+- [ ] Change status
 
 ### Phase 3
 - [ ] Group calls
