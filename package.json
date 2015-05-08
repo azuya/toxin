@@ -26,5 +26,11 @@
   },
   "scripts": {
     "test": "standard"
+  },
+  "standard": {
+    "ignore": [
+      "static/components/**",
+      "node_modules/**"
+    ]
   }
 }
