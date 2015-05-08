@@ -15,6 +15,9 @@
     "cryptography"
   ],
   "author": "Oliver Nordbjerg <oliver@pfmedia.dk>",
+  "bugs": {
+    "url": "https://github.com/toxin-im/toxin/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "electron-prebuilt": "^0.25.1-1",
