@@ -2,10 +2,10 @@
 
 This is a beautiful cross-platform client for Tox, built with [Electron][2].
 
-[![Build status](https://img.shields.io/travis/onbjerg/toxin.svg)](https://travis-ci.org/onbjerg/toxin)
-[![Version](https://img.shields.io/github/release/onbjerg/toxin.svg)](https://github.com/onbjerg/toxin/releases)
-[![Dependency Status](https://img.shields.io/david/onbjerg/toxin.svg)](https://david-dm.org/onbjerg/toxin)
-[![Dev Dependency Status](https://img.shields.io/david/dev/onbjerg/toxin.svg)](https://david-dm.org/onbjerg/toxin#info=devDependencies)
+[![Build status](https://img.shields.io/travis/toxin-im/toxin.svg)](https://travis-ci.org/toxin-im/toxin)
+[![Version](https://img.shields.io/github/release/toxin-im/toxin.svg)](https://github.com/toxin-im/toxin/releases)
+[![Dependency Status](https://img.shields.io/david/toxin-im/toxin.svg)](https://david-dm.org/toxin-im/toxin)
+[![Dev Dependency Status](https://img.shields.io/david/dev/toxin-im/toxin.svg)](https://david-dm.org/toxin-im/toxin#info=devDependencies)
 
 ## Vision
 
@@ -48,7 +48,7 @@ client for Tox. Privacy and elegance in one.
 ## Installation
 
 ```
-git clone https://github.com/onbjerg/toxin
+git clone https://github.com/toxin-im/toxin
 cd toxin
 apm install
 npm start
