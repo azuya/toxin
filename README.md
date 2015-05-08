@@ -22,6 +22,7 @@ own unique additions and modifications.
 - [x] User updates (status, message, name)
 - [x] Change name and message
 - [ ] Change status
+- [x] Save/load profile to disk
 
 ### Phase 2
 - [ ] Basic settings page
@@ -36,6 +37,7 @@ own unique additions and modifications.
 - [ ] Video chat
 - [ ] Settings page
 - [ ] Polish
+- [ ] Don't store _anything_ unless the user says so
 
 In between each phase a session of refactoring will take place.
 
