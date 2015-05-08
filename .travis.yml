@@ -6,7 +6,7 @@ cache:
   directories:
     - node_modules
 before_install:
-  - git clone git@github.com:atom/apm.git --depth=10
+  - git clone https://github.com/atom/apm.git --depth=10
   - cd apm
   - npm install
   - grunt
