@@ -7,10 +7,11 @@ toxify.controller('HomeCtrl', ['$scope', '$interval', function($scope, $interval
     'Have a great idea? Create an issue on GitHub',
     'Toxify is developed for free. Consider donating'
   ];
+  $scope.tip = tips[Math.floor((Math.random() * tips.length))];
 
   $interval(function()
   {
-    $scope.tip = tips[Math.floor((Math.random() * tips.length) +1 )];
+    $scope.tip = tips[Math.floor((Math.random() * tips.length))];
   }, 5000);
 }]);
 toxify.controller('SelfCtrl', ['$scope', 'Me', function($scope, me) {

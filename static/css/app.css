@@ -40,12 +40,14 @@ body {
     float: right;
 }
 
-h1.home {
-  font-size: 12pt;
-  color: #dadada;
-  height: 100%;
-  margin: 0 auto;
+h1.tip {
+  font-size: 24pt;
+  color: rgba(0, 0, 0, 0.25);
   display: block;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 h1,
