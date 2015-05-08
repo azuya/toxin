@@ -1,11 +1,11 @@
-toxify.controller('HomeCtrl', ['$scope', '$interval', function($scope, $interval) {
+toxin.controller('HomeCtrl', ['$scope', '$interval', function($scope, $interval) {
   var tips = [
-    'Toxify is just as free and open-source as Tox',
+    'Toxin is just as free and open-source as Tox',
     'Tox is encrypted. Messages are only readable by you',
     'Want to help? Visit our GitHub repository',
     'Spotted a bug? Create an issue on GitHub',
     'Have a great idea? Create an issue on GitHub',
-    'Toxify is developed for free. Consider donating'
+    'Toxin is developed for free. Consider donating'
   ];
   $scope.tip = tips[Math.floor((Math.random() * tips.length))];
 
@@ -14,7 +14,7 @@ toxify.controller('HomeCtrl', ['$scope', '$interval', function($scope, $interval
     $scope.tip = tips[Math.floor((Math.random() * tips.length))];
   }, 5000);
 }]);
-toxify.controller('SelfCtrl', ['$scope', 'Me', function($scope, me) {
+toxin.controller('SelfCtrl', ['$scope', 'Me', function($scope, me) {
   $scope.name = me.name;
   $scope.message = me.message;
   $scope.status = me.status;
@@ -29,7 +29,7 @@ toxify.controller('SelfCtrl', ['$scope', 'Me', function($scope, me) {
     me.setMessage($scope.message);
   }
 }]);
-toxify.controller('ContactCtrl', ['$scope', 'Friend', function($scope, friend) {
+toxin.controller('ContactCtrl', ['$scope', 'Friend', function($scope, friend) {
   $scope.contacts = friend.all();
 
   $scope.status = function(contact) {
@@ -42,7 +42,7 @@ toxify.controller('ContactCtrl', ['$scope', 'Friend', function($scope, friend) {
   }
 }]);
 
-toxify.controller('ChatCtrl', ['$scope', '$routeParams', 'Chat', function($scope, $routeParams, chat) {
+toxin.controller('ChatCtrl', ['$scope', '$routeParams', 'Chat', function($scope, $routeParams, chat) {
   // TODO More elegant solution?
   $scope.messages = [];
   $scope.$watch(

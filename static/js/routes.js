@@ -1,4 +1,4 @@
-toxify.config(['$routeProvider',
+toxin.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/home', {

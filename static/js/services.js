@@ -1,9 +1,22 @@
-angular.module('toxify.services', []).
+angular.module('toxin.services', []).
   factory('Tox', function() {
-    var tox = new (require('toxcore')).Tox({
+    // TODO Move all Tox-specific logic to the main process
+    // and interface with the main process using ipc
+    var home = process.env.HOME || process.env.USERPROFILE;
+    var toxinPath = home + '/.toxin';
+    var options = {
       path: path.resolve(__dirname, '..', '..', 'libtoxcore.so')
-    });
+    };
 
+    // Try to resolve a profile
+    if(fs.existsSync(toxinPath + '/profile.tox')) {
+      options['data'] = toxinPath + '/profile.tox';
+    }
+
+    // Create Tox
+    var tox = new (require('toxcore')).Tox(options);
+
+    // TODO Make the bootstrap list configurable by the user
     var nodes = [
       { maintainer: 'saneki',
         address: '96.31.85.154',
@@ -23,8 +36,17 @@ angular.module('toxify.services', []).
       tox.bootstrapSync(node.address, node.port, node.key);
     });
 
-    tox.setNameSync('Toxer');
-    tox.setStatusMessageSync('Beautiful Tox');
+    if(!tox.getNameSync()) {
+      tox.setNameSync('Toxer');
+      tox.setStatusMessageSync('Beautiful Tox');
+    }
+
+    // Save our profile to disk before quit
+    // TODO Only save if the user explicitly set this in the settings
+    require('remote').require('app').on('before-quit', function() {
+      require('remote').require('mkpath').sync(toxinPath);
+      tox.saveToFileSync(toxinPath + '/profile.tox');
+    });
 
     console.log(tox.getAddressHexSync());
 

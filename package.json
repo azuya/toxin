@@ -1,8 +1,8 @@
 {
-  "name": "toxify",
+  "name": "toxin",
   "version": "0.1.0",
   "description": "Beautiful Tox",
-  "main": "src/toxify.js",
+  "main": "src/toxin.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +20,7 @@
     "electron-prebuilt": "^0.25.1-1"
   },
   "dependencies": {
+    "mkpath": "^0.1.0",
     "toxcore": "^1.0.2"
   }
 }
