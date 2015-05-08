@@ -39,6 +39,9 @@ angular.module('toxify.services', []).
       all: function() {
         return this.friends;
       },
+      requests: function() {
+        return this.requests;
+      },
       find: function(addr) {
         if(typeof addr == 'number') {
           // Search based on friend ID
