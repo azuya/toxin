@@ -3,6 +3,7 @@
 This is a beautiful cross-platform client for Tox, built with [Electron][2].
 
 [![Build status](https://img.shields.io/travis/toxin-im/toxin.svg)](https://travis-ci.org/toxin-im/toxin)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 [![Version](https://img.shields.io/github/release/toxin-im/toxin.svg)](https://github.com/toxin-im/toxin/releases)
 [![Dependency Status](https://img.shields.io/david/toxin-im/toxin.svg)](https://david-dm.org/toxin-im/toxin)
 [![Dev Dependency Status](https://img.shields.io/david/dev/toxin-im/toxin.svg)](https://david-dm.org/toxin-im/toxin#info=devDependencies)
