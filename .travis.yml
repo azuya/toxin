@@ -1,12 +1,11 @@
 language: node_js
 node_js:
   - 'iojs'
-sudo: false
+sudo: required
 cache:
   directories:
     - node_modules
 before_install:
-  - apt-get install libgnome-keyring-dev
   - git clone git@github.com:atom/apm.git --depth=10
   - cd apm
   - npm install
@@ -15,3 +14,9 @@ install:
   - apm/bin/apm install
 script:
   - npm test
+addons:
+  apt:
+    packages:
+    - build-essential
+    - git
+    - libgnome-keyring-dev
