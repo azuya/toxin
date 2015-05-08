@@ -136,7 +136,16 @@ angular.module('toxify.services', []).
       address: tox.getAddressHexSync(),
       name: tox.getNameSync(),
       message: tox.getStatusMessageSync(),
-      status: getStatus()
+      status: getStatus(),
+      setName: function(name) {
+        if(!name) {
+          name = 'Toxer';
+        }
+        tox.setNameSync(name);
+      },
+      setMessage: function(message) {
+        tox.setStatusMessageSync(message);
+      }
     }
 
     return service;

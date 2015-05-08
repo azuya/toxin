@@ -22,6 +22,12 @@ toxify.controller('SelfCtrl', ['$scope', 'Me', function($scope, me) {
   $scope.close = function() {
     require('ipc').send('quit');
   }
+  $scope.setName = function() {
+    me.setName($scope.name);
+  }
+  $scope.setMessage = function() {
+    me.setMessage($scope.message);
+  }
 }]);
 toxify.controller('ContactCtrl', ['$scope', 'Friend', function($scope, friend) {
   $scope.contacts = friend.all();

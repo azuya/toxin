@@ -88,7 +88,23 @@ header {
         -webkit-user-select: none;
     }
     header .user .info .name {
-        color: #FC6747;
+      border: none;
+      background: none;
+      color: #FC6747;
+      font-family: 'Lora', sans-serif;
+      display: block;
+      font-size: 1.17em;
+      outline: none;
+    }
+    header .user .info .message {
+      border: none;
+      background: none;
+      color: #999999;
+      font-size: 10pt;
+      font-style: italic;
+      font-family: 'Lora', sans-serif;
+      display: block;
+      outline: none;
     }
     header .action {
         color: #FC6747;

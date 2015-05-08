@@ -12,8 +12,8 @@
 								<span class="status"></span>
 						</div>
 						<div class="info">
-								<h3 class="name">{{name}}</h3>
-								<span class="message">{{message}}</span>
+								<input type="text" class="name" ng-model="name" ng-blur="setName()" value="{{name}}">
+								<input type="text" class="message" ng-model="message" ng-blur="setMessage()" value="{{message}}" placeholder="What's on your mind?">
 						</div>
 						<div class="clear"></div>
 				</div>
