@@ -17,9 +17,11 @@ own unique additions and modifications.
 ### Phase 1
 - [x] Basic interface
 - [x] Incoming messages
-- [ ] Outgoing messages
+- [x] Outgoing messages
 - [ ] Friend requests
 - [x] User updates (status, message, name)
+- [x] Change name and message
+- [ ] Change status
 
 ### Phase 2
 - [ ] Basic settings page
