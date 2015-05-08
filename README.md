@@ -69,7 +69,7 @@ You can donate using Bitcoin: 1ByVHY8TWZy6SzM6XtofT3DmveryCviAnH
 
 ## License
 
-Toxin is licensed under the MIT license
+Toxin is licensed under GNU GPLv3
 
 [1]: https://tox.im
 [2]: http://electron.atom.io/
