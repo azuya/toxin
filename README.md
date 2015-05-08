@@ -7,6 +7,8 @@ This is a beautiful cross-platform client for Tox, built with [Electron][2].
 [![Dependency Status](https://img.shields.io/david/toxin-im/toxin.svg)](https://david-dm.org/toxin-im/toxin)
 [![Dev Dependency Status](https://img.shields.io/david/dev/toxin-im/toxin.svg)](https://david-dm.org/toxin-im/toxin#info=devDependencies)
 
+![Screenshot of Toxin](http://i.imgur.com/EWy7GT7.png)
+
 ## Vision
 
 **Please note that Toxin is still undergoing heavy development!**
